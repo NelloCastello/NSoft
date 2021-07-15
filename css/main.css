@@ -261,6 +261,10 @@ body {
 }
 
 .header__register__start-register-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 35px;
     width: fit-content;
     background: #BFFF00;
@@ -271,6 +275,27 @@ body {
     font-size: 16px;
     color: #384A00;
     cursor: pointer;
+    transition: color 200ms;
+}
+.header__register__start-register-btn span {
+    z-index: 1;
+}
+.header__register__start-register-btn::before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    background: #7646FF;
+    height: 100%;
+    width: 0;
+    border-radius: 49px;
+    transition: width 200ms;
+}
+.header__register__start-register-btn:hover {
+    color: #CBCBCB;
+
+}
+.header__register__start-register-btn:hover::before {
+    width: 100%;
 }
 
 
@@ -310,15 +335,31 @@ body {
     background-repeat: no-repeat;
     border-radius: 5px;
 }
-.news-item__image a {
+
+.news-item__image .pop-up {
+    visibility: hidden;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+}
+
+.pop-up__read-more {
+    font-weight: 700;
+    color: #000;
+    padding: 15px 15px;
+    border: 3px solid #000;
+    border-radius: 7px;
 }
 
 .news-item__text {
     position: relative;
     flex: 1;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .news-item__date {
@@ -336,15 +377,23 @@ body {
 }
 
 .news-item__descr {
+    position: relative;
     font-size: 16px;
     color: #5E5C5C;
 }
-
-.news-item-hiding {
+.news-item__descr::after {
+    z-index: 0;
     position: absolute;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
-    left: 0; right: 0; bottom: 0;
-    height: 26px;
+    content: '';
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    bottom: 0; left: 0; right: 0;
+    height: 40px;
+}
+
+.news-item__descr__link-hidden {
+    z-index: 1;
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
 }
 
 .news__read-more-btn {
