@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/78f2648525.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>NSoft - полезные программы и игры от N</title>
 </head>
@@ -41,7 +42,7 @@
                 <form class="header__register" action="" method="POST">
                     <h2 class="header__register__head">Зарегистрируйтесь, чтобы<br>получить <a href="#">дополнительные<br>возможности</a></h2>
                     <input class="header__register__email-input" type="email" placeholder="Email">
-                    <button class="header__register__start-register">Начать регистрацию</button>
+                    <button class="header__register__start-register-btn">Начать регистрацию</button>
                 </form>
             </div>
         </div>
@@ -53,18 +54,18 @@
                 <h1 class="news__head">Новости</h1>
                 <div class="news-list">
                     <div class="news-item">
-                        <div class="news-item__image"></div>
+                        <div class="news-item__image"><a href="#"></a></div>
                         <div class="news-item__text">
-                            <p class="news-item__date"><i class="far fa-clock"></i> 13 Июня 2021</p>
-                            <h1 class="news-item__head">Исправлен баг с бла-бла-бла</h1>
+                            <p class="news-item__date"><a href="#"><i class="far fa-clock"></i> 13 Июня 2021</a></p>
+                            <h1 class="news-item__head"><a href="#">Исправлен баг с бла-бла-бла</a></h1>
                             <div class="news-item__descr">
-                                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
+                                <a href="#"><p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
                                 Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный 
                                 печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно 
                                 пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с 
                                 образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem 
                                 Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с 
-                                начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</p>
+                                начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя</p></a>
                             </div>
                             <div class="news-item-hiding"></div>
                         </div>
@@ -75,11 +76,14 @@
         </div>
     </main>
 
+    <div class="indent"></div>
+
     <footer class="footer">
         <div class="container">
             <p class="footer__copyright">© 2021 N. Все права защищены</p>
         </div>
     </footer>
 
+    <script src="js/anim.js"></script>
 </body>
 </html>
