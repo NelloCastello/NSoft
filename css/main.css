@@ -440,6 +440,11 @@ body {
     box-shadow: 0 0 15px #000;
 }
 
+.news-item__image__pop-up__read-more:active {
+    padding: 13px 13px;
+    
+}
+
 .news-item__text {
     position: relative;
     flex: 1;
