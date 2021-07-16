@@ -23,7 +23,7 @@ body {
 
 /* NAVIGATION */
 
-.nav > .container {
+.nav>.container {
     display: flex;
     justify-content: space-between;
     padding-top: 11px;
@@ -40,6 +40,7 @@ body {
     margin-right: 9px;
     transition: transform 200ms;
 }
+
 .nav__logo:hover {
     transform: rotate(180deg);
 }
@@ -51,6 +52,7 @@ body {
     color: #BFFF00;
     transition: color 200ms;
 }
+
 .nav__head:hover {
     color: #FF00BF;
 }
@@ -71,20 +73,25 @@ body {
     font-size: 18px;
     font-weight: 700;
 }
+
 .nav-list__item:last-child {
     margin-right: 0;
 }
+
 .nav-list__item::before {
     content: '';
     position: absolute;
-    top: 100%; bottom: -7px;
+    top: 100%;
+    bottom: -7px;
     width: 0;
     background: #BFFF00;
     transition: width 200ms;
 }
+
 .nav-list__item:hover::before {
     width: 100%;
 }
+
 .nav-list__item a {
     display: flex;
     align-items: center;
@@ -97,7 +104,8 @@ body {
     align-items: center;
 }
 
-.nav__login-link, .nav__logup-link {
+.nav__login-link,
+.nav__logup-link {
     font-size: 18px;
 }
 
@@ -105,6 +113,7 @@ body {
     margin-right: 20px;
     font-weight: 700;
 }
+
 .nav__login-link a {
     color: #fff;
 }
@@ -119,14 +128,17 @@ body {
     border-radius: 7px 15px 7px 15px;
     transition: box-shadow 200ms;
 }
+
 .nav__logup-link:hover {
     box-shadow: 0 0 15px rgba(191, 255, 0, 0.75);
 }
+
 .nav__logup-link:active {
     margin-right: 2px;
     margin-left: 2px;
     box-shadow: none;
 }
+
 .nav__logup-link::before {
     content: '';
     position: absolute;
@@ -136,14 +148,17 @@ body {
     border-radius: 7px 15px 7px 15px;
     transition: width 200ms;
 }
+
 .nav__logup-link:hover::before {
     width: 100%;
 }
+
 .nav__logup-link a {
     z-index: 1;
     color: #6E1B00;
     padding: 13px 19px;
 }
+
 .nav__logup-link a:active {
     padding: 11px 17px;
 }
@@ -157,6 +172,7 @@ body {
     background-size: cover;
     background-position: left 15.42% bottom 0;
 }
+
 @media screen and (min-width: 1921px) {
     .header {
         background-size: contain;
@@ -164,7 +180,7 @@ body {
     }
 }
 
-.header__content > .container {
+.header__content>.container {
     display: flex;
 }
 
@@ -203,9 +219,11 @@ body {
     width: fit-content;
     transition: box-shadow 200ms;
 }
+
 .header__download-btn:hover {
     box-shadow: 0 0 15px rgba(191, 255, 0, 0.75);
 }
+
 .header__download-btn:active {
     margin-left: 229px;
     margin-top: 104px;
@@ -213,6 +231,7 @@ body {
     margin-right: 2px;
     box-shadow: none;
 }
+
 .header__download-btn::before {
     z-index: 0;
     content: '';
@@ -223,14 +242,17 @@ body {
     border-radius: 55px;
     transition: width 200ms;
 }
+
 .header__download-btn:hover::before {
     width: 100%;
 }
+
 .header__download-btn a {
     z-index: 1;
     padding: 13px 37px;
     color: #6E1B00;
 }
+
 .header__download-btn a:active {
     padding: 11px 35px;
 }
@@ -255,9 +277,11 @@ body {
     color: #525252;
     text-align: center;
 }
+
 .header__register__head a {
     color: #7646FF;
 }
+
 .header__register__head a:hover {
     text-decoration: underline;
 }
@@ -274,6 +298,7 @@ body {
     transition-property: padding margin-top margin-left margin-right margin-bottom border box-shadow;
     transition-duration: 200ms;
 }
+
 .header__register__email-input:focus {
     border: 3px solid #BFFF00;
     padding: 14px 22px;
@@ -283,6 +308,7 @@ body {
     margin-bottom: -4px;
     box-shadow: 0 0 15px rgba(191, 255, 0, 0.75);
 }
+
 .header__register__email-input::placeholder {
     color: #CBCBCB;
 }
@@ -304,9 +330,11 @@ body {
     cursor: pointer;
     transition: color 200ms, box-shadow 200ms;
 }
+
 .header__register__start-register-btn span {
     z-index: 1;
 }
+
 .header__register__start-register-btn::before {
     z-index: 0;
     content: '';
@@ -317,13 +345,16 @@ body {
     border-radius: 49px;
     transition: width 200ms;
 }
+
 .header__register__start-register-btn:hover {
     color: #CBCBCB;
     box-shadow: 0 0 15px rgba(120, 71, 255, 0.75);
 }
+
 .header__register__start-register-btn:hover::before {
     width: 100%;
 }
+
 .header__register__start-register-btn:active {
     padding: 10px 23px;
     margin-top: 37px;
@@ -338,7 +369,7 @@ body {
     margin-top: 30px;
 }
 
-.news > .container {
+.news>.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,10 +400,13 @@ body {
     border-radius: 5px;
 }
 
-.news-item__image .pop-up {
+.news-item__image__pop-up {
     visibility: hidden;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,7 +414,7 @@ body {
     border-radius: 5px;
 }
 
-.pop-up__read-more {
+.news-item__image__pop-up__read-more {
     font-weight: 700;
     color: #000;
     padding: 15px 15px;
@@ -414,19 +448,25 @@ body {
     font-size: 16px;
     color: #5E5C5C;
 }
+
 .news-item__descr::after {
     z-index: 0;
     position: absolute;
     content: '';
     background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 40px;
 }
 
 .news-item__descr__link-hidden {
     z-index: 1;
     position: absolute;
-    top: 0;left: 0;right: 0;bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .news__read-more-btn {
@@ -441,14 +481,17 @@ body {
     border-radius: 33.5px;
     transition: box-shadow 200ms;
 }
+
 .news__read-more-btn:hover {
     box-shadow: 0 0 15px rgba(255, 0, 191, 0.75);
 }
+
 .news__read-more-btn:active {
     margin-top: 52px;
     margin-bottom: 180px;
     box-shadow: none;
 }
+
 .news__read-more-btn::before {
     position: absolute;
     z-index: 0;
@@ -459,14 +502,17 @@ body {
     border-radius: 33.5px;
     transition: width 200ms;
 }
+
 .news__read-more-btn:hover::before {
     width: 100%;
 }
+
 .news__read-more-btn a {
     z-index: 1;
     padding: 15px 23px;
     color: #E5E5E5;
 }
+
 .news__read-more-btn a:active {
     padding: 13px 21px;
 }
@@ -482,7 +528,7 @@ body {
     background: #000000;
 }
 
-.footer > .container{
+.footer>.container {
     display: flex;
     justify-content: center;
 }
