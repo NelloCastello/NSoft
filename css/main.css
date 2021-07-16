@@ -442,7 +442,7 @@ body {
 
 .news-item__image__pop-up__read-more:active {
     padding: 13px 13px;
-    
+    box-shadow: none;
 }
 
 .news-item__text {
