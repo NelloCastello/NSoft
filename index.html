@@ -60,8 +60,8 @@
                 <div class="news-list">
                     <div class="news-item">
                         <div class="news-item__image"
-                            onmouseover="this.querySelector('.news-item__image__pop-up').style.visibility = 'visible'"
-                            onmouseout="this.querySelector('.news-item__image__pop-up').style.visibility = 'hidden'">
+                            onmouseover="showPopForImageOfNewsItem(this)"
+                            onmouseout="hidePopForImageOfNewsItem(this)">
                             <a class="news-item__image__pop-up" href="#">
                                 <div class="news-item__image__pop-up__read-more">Читать далее</div>
                             </a></div>
