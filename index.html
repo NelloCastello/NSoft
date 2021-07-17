@@ -22,7 +22,7 @@
     <header class="header night-anim">
         <nav class="nav">
             <div class="night-switch" onclick="switchNightDay(0)"><i class="fas fa-moon"></i></div>
-            <div class="day-switch" onclick="switchNightDay(1)"><i class="fas fa-sun"></i></div>
+            <div class="day-switch" style="display: none;" onclick="switchNightDay(1)"><i class="fas fa-sun"></i></div>
 
             <div class="container">
                 <div class="nav__logo-container">
@@ -47,12 +47,34 @@
                     <p class="header__descr">Здесь можно скачать программы<br>и игры от компании N</p>
                     <div class="header__download-btn night-anim"><a href="#">Скачать</a></div>
                 </div>
-                <form class="header__register night-anim" action="" method="POST">
+                <form class="header__register night-anim" action="/" method="POST" >
+
                     <h2 class="header__register__head night-anim">Зарегистрируйтесь, чтобы<br>получить <a
                             class="night-anim" href="#">дополнительные<br>возможности</a></h2>
-                    <input class="header__register__email-input night-anim" type="email" placeholder="Email">
-                    <button class="header__register__start-register-btn night-anim" type="button"><span>Начать
-                            регистрацию</span></button>
+
+                    <input class="header__register__input header__register__email-input night-anim id-1" type="email"
+                        placeholder="Email">
+                    <input class="header__register__input header__register__nickname-input night-anim id-2 hidden" type="text"
+                        placeholder="Ник">
+                    <input class="header__register__input header__register__password-input night-anim id-3 hidden" type="password"
+                        placeholder="Пароль">
+                    <input class="header__register__input header__register__confirm-password-input night-anim id-4 hidden"
+                        type="password" placeholder="Подтвердите пароль">
+                    <input class="header__register__input header__register__code-input night-anim id-5 hidden" type="number"
+                        placeholder="Код подтверждения">
+
+                    <div class="header__register__nav-btns-container">
+                        <button class="header__register__nav-btn header__register__start-btn night-anim" onclick="navRegister('start')"
+                            type="button"><span>Начать регистрацию</span></button>
+                        <button class="header__register__nav-btn header__register__prev-btn night-anim hidden" onclick="navRegister('prev')"
+                            type="button"><span>Назад</span></button>
+                        <button class="header__register__nav-btn header__register__next-btn night-anim hidden" onclick="navRegister('next')"
+                            type="button"><span>Далее</span></button>
+                        <button
+                            class="header__register__nav-btn header__register__done-btn night-anim hidden" onclick="navRegister('done')"
+                            type="submit"><span>Готово</span></button>
+                    </div>
+
                 </form>
             </div>
         </div>

@@ -6,20 +6,20 @@ body {
     background-image: url("../img/background/header-dark.svg");
 }
 
-.header__register__start-register-btn {
+.header__register__nav-btn {
     background: #5F741F;
 }
 
-.header__register__start-register-btn:hover {
+.header__register__nav-btn:hover {
     color: #000;
     box-shadow: 0 0 15px rgba(191, 255, 0, 0.75);
 }
 
-.header__register__start-register-btn:active {
+.header__register__nav-btn:active {
     box-shadow: none;
 }
 
-.header__register__start-register-btn::before {
+.header__register__nav-btn::before {
     background: #BFFF00;
 }
 
@@ -77,17 +77,17 @@ body {
     color: #E5E5E5;
 }
 
-.header__register__email-input {
+.header__register__input {
     border-color: #484848;
     color: #E5E5E5;
 }
 
-.header__register__email-input:focus {
+.header__register__input:focus {
     border-color: #5F741F;
     box-shadow: 0 0 15px rgba(191, 255, 0, 0.75);
 }
 
-.header__register__email-input::placeholder {
+.header__register__input::placeholder {
     color: #484646;
 }
 

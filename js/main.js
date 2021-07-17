@@ -1,3 +1,6 @@
+let registerCount = 1;
+
+
 function eventPopUpForImageOfNewsItem(index, parent) {
     const popup = parent.querySelector('.news-item__image__pop-up');
     const readmore = parent.querySelector('.news-item__image__pop-up__read-more');
@@ -49,3 +52,63 @@ function switchNightDay(index) {
     }
 }
 
+function navRegister(click) {
+    const $ = document;
+
+    const btnStart = $.querySelector('.header__register__start-btn');
+    const btnPrev = $.querySelector('.header__register__prev-btn');
+    const btnNext = $.querySelector('.header__register__next-btn');
+    const btnDone = $.querySelector('.header__register__done-btn');
+
+    const inputEmail = $.querySelector('.header__register__email-input');
+    const inputNickname = $.querySelector('.header__register__nickname-input');
+    const inputPassword = $.querySelector('.header__register__password-input');
+    const inputConfirmPassword = $.querySelector('.header__register__confirm-password-input');
+    const inputCode = $.querySelector('.header__register__code-input');
+
+    switch (click) {
+        case 'start':
+            registerCount = 2;
+
+            $.querySelector('.header__register__input.id-1').classList.add('hidden');
+            $.querySelector('.header__register__input.id-2').classList.remove('hidden');
+
+            btnStart.classList.add('hidden');
+            btnNext.classList.remove('hidden');
+            btnPrev.classList.remove('hidden');
+            break;
+
+        case 'prev':
+            registerCount -= 1;
+
+            $.querySelector(`.header__register__input.id-${registerCount}`).classList.remove('hidden');
+            $.querySelector(`.header__register__input.id-${registerCount+1}`).classList.add('hidden');
+
+            btnDone.classList.add('hidden');
+            btnNext.classList.remove('hidden');
+
+            if (registerCount == 1) {
+                btnNext.classList.add('hidden');
+                btnPrev.classList.add('hidden');
+                btnStart.classList.remove('hidden');
+            } else {
+
+            }
+            break;
+
+        case 'next':
+            registerCount += 1;
+
+            $.querySelector(`.header__register__input.id-${registerCount}`).classList.remove('hidden');
+            $.querySelector(`.header__register__input.id-${registerCount-1}`).classList.add('hidden');
+
+            if (registerCount == 5) {
+                btnNext.classList.add('hidden');
+                btnDone.classList.remove('hidden');
+            }
+            break;
+
+        case 'done':
+            registerCount = 1;
+    }
+}

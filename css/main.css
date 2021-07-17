@@ -36,7 +36,6 @@ body {
 
 .day-switch {
     color: #fbff00;
-    display: none;
 }
 
 
@@ -312,8 +311,9 @@ body {
     color: #ff3300;
 }
 
-.header__register__email-input {
-    width: 250px;
+.header__register__input {
+    min-width: 270px;
+    width: 100%;
     margin-top: 40px;
     font-size: 16px;
     padding: 12px 20px;
@@ -322,30 +322,30 @@ body {
     border-radius: 5px;
     color: #5E5C5C;
     outline: none;
-    transition-property: padding margin-top margin-left margin-right margin-bottom border box-shadow;
+    transition-property:  border box-shadow;
     transition-duration: 200ms;
+    box-sizing: border-box;
 }
 
-.header__register__email-input:focus {
+.header__register__input:focus {
     border: 3px solid #FF6B00;
-    padding: 14px 22px;
-    margin-top: 38px;
-    margin-left: -2px;
-    margin-right: -4px;
-    margin-bottom: -4px;
     box-shadow: 0 0 15px rgba(255, 106, 0, 0.75);
 }
 
-.header__register__email-input::placeholder {
+.header__register__input::placeholder {
     color: #CBCBCB;
 }
 
-.header__register__start-register-btn {
+.header__register__nav-btns-container {
+    margin-top: 35px;
+    display: flex;
+}
+
+.header__register__nav-btn {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 35px;
     width: fit-content;
     background: #FF6B00;
     border-radius: 49px;
@@ -358,11 +358,11 @@ body {
     transition: color 200ms, box-shadow 200ms;
 }
 
-.header__register__start-register-btn span {
+.header__register__nav-btn span {
     z-index: 1;
 }
 
-.header__register__start-register-btn::before {
+.header__register__nav-btn::before {
     z-index: 0;
     content: '';
     position: absolute;
@@ -373,19 +373,20 @@ body {
     transition: width 200ms;
 }
 
-.header__register__start-register-btn:hover {
+.header__register__nav-btn:hover {
     box-shadow: 0 0 15px rgba(255, 51, 0, 0.75);
 }
 
-.header__register__start-register-btn:hover::before {
+.header__register__nav-btn:hover::before {
     width: 100%;
 }
 
-.header__register__start-register-btn:active {
-    padding: 10px 23px;
-    margin-top: 37px;
-    margin-bottom: 2px;
+.header__register__nav-btn:active {
     box-shadow: none;
+}
+
+.header__register__prev-btn {
+    margin-right: 20px;
 }
 
 
@@ -577,4 +578,11 @@ body {
 .footer__copyright {
     padding: 41px 0;
     color: #929292;
+}
+
+
+
+
+.hidden {
+    display: none;
 }
