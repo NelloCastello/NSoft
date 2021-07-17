@@ -1,0 +1,7 @@
+.night-anim,
+.night-anim::before,
+.night-anim::after,
+.night-anim::placeholder {
+    transition-property: all;
+    transition-duration: 200ms;
+}

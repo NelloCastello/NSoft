@@ -12,13 +12,18 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/78f2648525.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/night-anim.css">
+    <!-- <link rel="stylesheet" href="css/night.css"> -->
     <title>NSoft - полезные программы и игры от N</title>
 </head>
 
-<body>
+<body class="night-anim">
 
-    <header class="header">
+    <header class="header night-anim">
         <nav class="nav">
+            <div class="night-switch" onclick="switchNightDay(0)"><i class="fas fa-moon"></i></div>
+            <div class="day-switch" onclick="switchNightDay(1)"><i class="fas fa-sun"></i></div>
+
             <div class="container">
                 <div class="nav__logo-container">
                     <a href="/"><img class="nav__logo" src="img/icons/nsoft-logo.svg" alt=""></a>
@@ -31,7 +36,7 @@
                 </li>
                 <div class="nav__account">
                     <p class="nav__login-link"><a href="#">Вход</a></p>
-                    <p class="nav__logup-link"><a href="#">Регистрация</a></p>
+                    <p class="nav__logup-link night-anim"><a href="#">Регистрация</a></p>
                 </div>
             </div>
         </nav>
@@ -40,13 +45,13 @@
                 <div class="header__about">
                     <h1 class="header__head">Полезные программы<br>и игры от N</h1>
                     <p class="header__descr">Здесь можно скачать программы<br>и игры от компании N</p>
-                    <div class="header__download-btn"><a href="#">Скачать</a></div>
+                    <div class="header__download-btn night-anim"><a href="#">Скачать</a></div>
                 </div>
-                <form class="header__register" action="" method="POST">
-                    <h2 class="header__register__head">Зарегистрируйтесь, чтобы<br>получить <a
-                            href="#">дополнительные<br>возможности</a></h2>
-                    <input class="header__register__email-input" type="email" placeholder="Email">
-                    <button class="header__register__start-register-btn" type="button"><span>Начать
+                <form class="header__register night-anim" action="" method="POST">
+                    <h2 class="header__register__head night-anim">Зарегистрируйтесь, чтобы<br>получить <a
+                            class="night-anim" href="#">дополнительные<br>возможности</a></h2>
+                    <input class="header__register__email-input night-anim" type="email" placeholder="Email">
+                    <button class="header__register__start-register-btn night-anim" type="button"><span>Начать
                             регистрацию</span></button>
                 </form>
             </div>
@@ -56,19 +61,21 @@
     <main class="content">
         <div class="news">
             <div class="container">
-                <h1 class="news__head">Новости</h1>
+                <h1 class="news__head night-anim">Новости</h1>
                 <div class="news-list">
                     <div class="news-item">
                         <div class="news-item__image" onmouseover="eventPopUpForImageOfNewsItem(0, this)"
                             onmouseout="eventPopUpForImageOfNewsItem(1, this)">
-                            <div class="news-item__image__pop-up">
-                                <a class="news-item__image__pop-up__read-more" href="#"><span>Читать далее</span></a>
+                            <div class="news-item__image__pop-up night-anim">
+                                <a class="news-item__image__pop-up__read-more night-anim" href="#"><span>Читать
+                                        далее</span></a>
                             </div>
                         </div>
                         <div class="news-item__text">
-                            <p class="news-item__date"><a href="#"><i class="far fa-clock"></i> 13 Июня 2021</a></p>
-                            <h1 class="news-item__head"><a href="#">Исправлен баг с бла-бла-бла</a></h1>
-                            <div class="news-item__descr">
+                            <p class="news-item__date night-anim"><a href="#"><i class="far fa-clock"></i> 13 Июня
+                                    2021</a></p>
+                            <h1 class="news-item__head night-anim"><a href="#">Исправлен баг с бла-бла-бла</a></h1>
+                            <div class="news-item__descr night-anim">
                                 <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                                     Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
                                     В то время некий безымянный
@@ -87,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__read-more-btn"><a href="#">Узнать больше</a></div>
+                <div class="news__read-more-btn night-anim"><a class="night-anim" href="#">Узнать больше</a></div>
             </div>
         </div>
     </main>

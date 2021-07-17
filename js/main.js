@@ -22,3 +22,29 @@ function eventPopUpForImageOfNewsItem(index, parent) {
     }
 
 }
+
+function switchNightDay(index) {
+    const head = document.querySelector('head');
+    const nightSwitch = document.querySelector('.night-switch');
+    const daySwitch = document.querySelector('.day-switch');
+
+    const link = document.createElement('link');
+    link.id = "NIGHTORDAYSWITCH"
+    link.rel = 'stylesheet';
+    link.href = 'css/night.css';
+
+
+    switch (index) {
+        case 0:
+            nightSwitch.style.display = "none";
+            daySwitch.style.display = "block";
+            head.appendChild(link);
+            break;
+
+        case 1:
+            nightSwitch.style.display = "block";
+            daySwitch.style.display = "none";
+            head.removeChild(document.getElementById('NIGHTORDAYSWITCH'));
+            break;
+    }
+}
