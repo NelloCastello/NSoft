@@ -483,6 +483,10 @@ body {
     color: #FF6B00;
 }
 
+.news-item__date:hover {
+    color: #ff3300;
+}
+
 .news-item__head {
     margin-bottom: 17px;
     font-family: 'Open Sans';

@@ -61,6 +61,10 @@ body {
     color: #5F741F;
 }
 
+.news-item__date:hover {
+    color: #BFFF00;
+}
+
 .header__download-btn {
     color: #5F741F;
 }

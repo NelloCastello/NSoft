@@ -48,3 +48,4 @@ function switchNightDay(index) {
             break;
     }
 }
+
